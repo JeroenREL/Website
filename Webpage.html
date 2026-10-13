@@ -5,6 +5,7 @@
     <title>Mijn Persoonlijke Pagina</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oldenburg:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
         /* De hoofdpagina (body): zet alle elementen onder elkaar (column) en centreert ze */
         body {
@@ -25,6 +26,10 @@
         h1 {
             font-family: 'Oldenburg'; /* Werd boven geimporteerd */
         }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+        }
         
         /* De arrowgroup: zet de elementen binnen deze groep naast elkaar (row) */
         #arrowgroup {
@@ -38,16 +43,20 @@
         }
 
         .video-container {
-            margin-top: 20px;
             text-align: center;
             width: 600px;           /* Pas deze waarde aan voor de gewenste grootte van je video */
             max-width: 100%;        /* Zorgt ervoor dat hij op mobiel niet van het scherm af loopt */
             margin-inline: auto;    /* Centreert de container automatisch perfect op de pagina */
+            margin-bottom: 50px;
         }
         
-        #paragraphtext {
+        p {
+            display: flex;
+            justify-content: center;
+            text-align: center;
             margin: 20px 100px;
             font-size: 18px;
+            max-width: 900px; 
         }
 
         .podcast-grid {
@@ -58,6 +67,7 @@
             max-width: 1020px;          /* Bepaalt globaal de breedte zodat er maximaal 3 op een rij passen */
             margin-inline: auto;        /* Centreert het hele blok op de pagina */
             margin-top: 20px;
+            margin-bottom: 50px;
             /* Kader en achtergrond: */
             background-color: #eeebde;/* Licht-geel-grijze tint */
             border-radius: 16px;        /* Maakt de hoeken mooi rond */
@@ -65,8 +75,48 @@
             border: 2px solid #888888;/* Donkerder grijze rand (maak het getal hoger of lager om dikker/dunner te maken) */
         }
 
+        #grid-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .podcast-grid h2 {
+            width: auto;
+            margin-left: 30px;
+        }
+
+        .podcast-grid h4 {
+            width: auto;
+            margin-left: 50px;
+        }
+
         .podcast-card {
             width: 310px;               /* Vaste breedte per podcast-speler */
+        }
+
+        .music-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1020px;  
+            margin-inline: auto;
+            margin-top: 20px;
+            /* Kader en achtergrond: */
+            background-color: #eeebde;
+            border-radius: 16px;
+            padding: 30px;
+            border: 2px solid #888888;
+        }
+
+        .music-grid h2 {
+            width: auto;
+            margin-left: 30px;
+        }
+
+        .music-grid h4 {
+            width: auto;
+            margin-left: 50px;
         }
         
     </style>
@@ -82,8 +132,14 @@
         </span>
     </div>
 
+    <div>
+        <p>
+            Een fijn project was het maken van een videoclip. Zowel het liedje als de (video)beelden zijn met behulp van AI gemaakt en afgewerkt met videosoftware en grafische software. Enjoy!
+        </p>
+    </div>
+
     <div class="video-container">
-        <h3>Mijn AI-videoclip</h3>
+                <h3>Mijn AI-videoclip</h3>
         <iframe width="100%" height="360" 
                 src="https://www.youtube-nocookie.com/embed/92_ReDblgS0" 
                 title="YouTube video" 
@@ -93,27 +149,13 @@
         </iframe>
     </div>
 
-    <div id="paragraphtext">
-        <p>
-            Om ! That is full; this is full, (for) from the full the full (indeed) arises.
-            When the full is taken from the full, what remains is full indeed.
-            Om! Peace! Peace! Peace!
-        </p>
-        <p>
-            1. Om. All this should be covered by the Lord, whatsoever moves on the earth. By such a renunciation
-            protect (thyself). Covet not the wealth of others.
-        </p>
-        <p>
-            2. By performing karma in this world (as enjoined by the scriptures) should one yearn to live a hundred
-            years. Thus action does not bind thee, the doer. There is no other way than this.
-        </p> 
-        <p>
-            3. Those worlds of Asuras (demons) are enshrouded by blinding gloom. Those who are the slayers of
-            the Self go to them after death.
-        </p>
-    </div>
-
     <div class="podcast-grid">
+        <div id="grid-header">        
+            <h2>Podcasts</h2>
+            <h4>
+                Ik post elke kwartaal een Engelstalige podcast op Spotify.
+            </h4>
+        </div>
         <div class="podcast-card">
             <h3>Podcast 1.1 Leadership & Religion</h3>
             <iframe style="border-radius:12px" 
@@ -158,6 +200,22 @@
                     allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
             </iframe>
         </div>
+    </div>
+
+    <div class="music-grid">
+        <div id="grid-header">
+            <h2>Liedjes</h2>
+            <h4>
+                In het begin van deze eeuw maakte ik tijd om me bezig te houden met het maken van liedjes.<br>
+                Hieronder kan je een aantal liedjes beluisteren.
+            </h4>
+        </div>
+        <audio controls controlsList="nodownload">
+            <source src="Trance.mp3" type="audio/mpegort the audio element.">
+        </audio>
+        <h4>
+            Trance
+        </h4>
     </div>
 
 </body>
