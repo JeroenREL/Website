@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Mijn Persoonlijke Pagina</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oldenburg:wght@400;700&display=swap');
+
+        /* De hoofdpagina (body): zet alle elementen onder elkaar (column) en centreert ze */
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            min-height: 100vh;
+        }
+    
+        span img {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+        
+        h1 {
+            font-family: 'Oldenburg'; /* Werd boven geimporteerd */
+        }
+        
+        /* De arrowgroup: zet de elementen binnen deze groep naast elkaar (row) */
+        #arrowgroup {
+            display: flex; 
+            flex-direction: row; 
+            flex-wrap: wrap;
+            margin-inline: auto;
+            margin-top: 0;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+            width: 600px;           /* Pas deze waarde aan voor de gewenste grootte van je video */
+            max-width: 100%;        /* Zorgt ervoor dat hij op mobiel niet van het scherm af loopt */
+            margin-inline: auto;    /* Centreert de container automatisch perfect op de pagina */
+        }
+        
+        #paragraphtext {
+            margin: 20px 100px;
+            font-size: 18px;
+        }
+
+        .podcast-grid {
+            display: flex;
+            flex-wrap: wrap;            /* Zorgt dat elementen naar de volgende regel springen als ze niet meer passen */
+            justify-content: center;    /* Centreert alles prachtig op de pagina */
+            gap: 20px;                  /* Ruimte tussen de spelers (horizontaal en verticaal) */
+            max-width: 1020px;          /* Bepaalt globaal de breedte zodat er maximaal 3 op een rij passen */
+            margin-inline: auto;        /* Centreert het hele blok op de pagina */
+            margin-top: 20px;
+            /* Kader en achtergrond: */
+            background-color: #eeebde;/* Licht-geel-grijze tint */
+            border-radius: 16px;        /* Maakt de hoeken mooi rond */
+            padding: 30px;              /* Binnenruimte zodat de spelers los van de rand komen */
+            border: 2px solid #888888;/* Donkerder grijze rand (maak het getal hoger of lager om dikker/dunner te maken) */
+        }
+
+        .podcast-card {
+            width: 310px;               /* Vaste breedte per podcast-speler */
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="arrowgroup">
+        <div>
+            <img width="200px" src="Images/Pijl3DAnimatie.gif">
+        </div>
+        <h1>Belangrijk!</h1>
+        <span>
+            <img width="200px" src="Images/Pijl3DAnimatie.gif">
+        </span>
+    </div>
+
+    <div class="video-container">
+        <h3>Mijn AI-videoclip</h3>
+        <iframe width="100%" height="360" 
+                src="https://www.youtube-nocookie.com/embed/92_ReDblgS0" 
+                title="YouTube video" 
+                frameborder="0" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <div id="paragraphtext">
+        <p>
+            Om ! That is full; this is full, (for) from the full the full (indeed) arises.
+            When the full is taken from the full, what remains is full indeed.
+            Om! Peace! Peace! Peace!
+        </p>
+        <p>
+            1. Om. All this should be covered by the Lord, whatsoever moves on the earth. By such a renunciation
+            protect (thyself). Covet not the wealth of others.
+        </p>
+        <p>
+            2. By performing karma in this world (as enjoined by the scriptures) should one yearn to live a hundred
+            years. Thus action does not bind thee, the doer. There is no other way than this.
+        </p> 
+        <p>
+            3. Those worlds of Asuras (demons) are enshrouded by blinding gloom. Those who are the slayers of
+            the Self go to them after death.
+        </p>
+    </div>
+
+    <div class="podcast-grid">
+        <div class="podcast-card">
+            <h3>Podcast 1.1 Leadership & Religion</h3>
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/episode/0AyxUYXLFYP0sOJapFucpS" 
+                    width="100%" height="152" frameborder="0" 
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="podcast-card">
+            <h3>Podcast 1.2 Prince Arjuna's dilemma</h3>
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/episode/3Gxlr3WjFQQ5eLkEhE3cob" 
+                    width="100%" height="152" frameborder="0" 
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="podcast-card">
+            <h3>Podcast 1.3 Listening to people</h3>
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/episode/0VpkIdMCgpF7MGwVb2NS20" 
+                    width="100%" height="152" frameborder="0" 
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="podcast-card">
+            <h3>Podcast 1.4 Mathematics & Religion</h3>
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/episode/1hkQqTebcwhrzTSGqDDGYT" 
+                    width="100%" height="152" frameborder="0" 
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="podcast-card">
+            <h3>Podcast 1.5 Communication styles</h3>
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/episode/795IYUtzsAXiGtX51fNcYv" 
+                    width="100%" height="152" frameborder="0" 
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>
