@@ -32,6 +32,10 @@
         }
         
         /* De arrowgroup: zet de elementen binnen deze groep naast elkaar (row) */
+        #header {
+            display: flex; 
+        }
+        
         #arrowgroup {
             display: flex; 
             flex-direction: row; 
@@ -40,6 +44,11 @@
             margin-top: 0;
             align-items: center;
             gap: 20px;
+        }
+
+        #arrow-animations {
+            width: 140px;
+            height: auto;
         }
         
         .video-container {
@@ -142,8 +151,9 @@
             width: auto;
             margin-left: 50px;
         }
-        .social-icon {
+        .social-icons-group {
             display: flex;
+            justify-content: center;
             width: 60px;
             height: auto;
             cursor: pointer;
@@ -151,7 +161,12 @@
             align-items: center;
         }
 
-        .social-icon img:hover {
+        .social-icons-group a img {
+            width: 60px;
+            height: auto;
+        }
+
+        #social-icon:hover {
             transform: scale(1.1);
         }
         
@@ -159,22 +174,23 @@
 </head>
 
 <body>
-    <div id="arrowgroup">
-        <div>
-            <img width="200px" src="Images/Pijl3DAnimatie.gif">
-        </div>
-        <h1>Belangrijk!</h1>
-        <span>
-            <img width="200px" src="Images/Pijl3DAnimatie.gif">
-        </span>
+    <div id="header">
+        <h1>Jeroen Luyten a.k.a. Ronnie Enzo</h1>
     </div>
 
     <div class="podcast-grid">
         <div id="grid-header">        
             <h2>Podcasts</h2>
             <h4>
-                Ik post op mijn kanaal op Spotify ("Ronnie Talks Higher Ground") elk kwartaal een Engelstalige podcast.
+                Ik post op mijn kanaal op Spotify
+                (<a href="https://open.spotify.com/show/1PMFoMRnoJcxgRlYJwQB7A?si=O9GDf7_OSkmLrAszWpN_eA"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Ronnie Talks Higher Ground
+                </a>)
+                elk kwartaal een Engelstalige podcast.
             </h4>
+            <!--https://open.spotify.com/show/1PMFoMRnoJcxgRlYJwQB7A?si=O9GDf7_OSkmLrAszWpN_eA-->
             <div class="podcast-icon">
                 <img src="images/PodcastMicroIcon.png">
             </div>
@@ -235,11 +251,14 @@
         
     </div>
     
+<!--Muzieksectie: EP "Verzonken"-->
+
     <div>
         <p>
             Een fijn project was het maken van een videoclip. Zowel het liedje als de (video)beelden zijn met behulp van AI gemaakt.
-            <br>Het geheel werd afgewerkt met videosoftware en grafische software. Enjoy!
-            <br>(meer details in de eindaftiteling van de video)
+            <br>Het geheel werd afgewerkt met videosoftware en grafische software (meer details in de eindaftiteling van de video).
+            <br>
+            <br>Enjoy!
         </p>
     </div>
 
@@ -264,21 +283,29 @@
         </div>
     
     </div>
-    <div class="social-icon">
-        <a href="https://www.linkedin.com/in/jeroenluyten/"
-            target="_blank"
-            rel="noopener noreferrer">
-            <img src="images/LILogoKlPastelGrof.png"
-                alt="Mijn LinkedIn-profiel"
-                class="social-icon">
-        </a>      
-        <a href="https://www.instagram.com/jeroen.re/"
-        target="_blank"
-            rel="noopener noreferrer">
-            <img src="images/IGLogoKlPastelGrof.png"
-                alt="Mijn Instagram-profiel"
-                class="social-icon">
-        </a>
+    <div id="arrowgroup"></div>
+        <div class="social-icons-group">    
+            <div>
+                <img id="arrow-animations" width="200px" src="Images/Pijl3DAnimatie.gif">
+            </div>
+                <a id="social-icon" href="https://www.linkedin.com/in/jeroenluyten/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="images/LILogoKlPastelGrof.png"
+                        alt="Mijn LinkedIn-profiel"
+                        class="social-icon">
+                </a>      
+                <a id="social-icon" href="https://www.instagram.com/jeroen.re/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="images/IGLogoKlPastelGrof.png"
+                        alt="Mijn Instagram-profiel"
+                        class="social-icon">
+                </a>
+            <span>
+                <img id="arrow-animations" width="200px" src="Images/Pijl3DAnimatie.gif">
+            </span>
+        </div>
     </div>
 </body>
 </html>
