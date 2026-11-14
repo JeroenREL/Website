@@ -143,11 +143,16 @@
             margin-left: 50px;
         }
         .social-icon {
+            display: flex;
             width: 60px;
             height: auto;
             cursor: pointer;
-            margin-left: 20px;
-            margin-right: 20px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.1);
         }
         
     </style>
@@ -164,38 +169,11 @@
         </span>
     </div>
 
-    <div>
-        <p>
-            Een fijn project was het maken van een videoclip. Zowel het liedje als de (video)beelden zijn met behulp van AI gemaakt en afgewerkt met videosoftware en grafische software. Enjoy!
-        </p>
-    </div>
-
-    <div class="podcast-grid">
-        <div id="grid-header">        
-            <h2>Video</h2>
-            <h4>
-                Mijn AI-videoclip.
-            </h4>
-            <div class="video-icon">
-                <img src="images/FilmIcon.png">
-            </div>
-        </div>
-        <div class="video-container">
-            <iframe width="100%" height="360" 
-                    src="https://www.youtube-nocookie.com/embed/92_ReDblgS0" 
-                    title="YouTube video" 
-                    frameborder="0" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
     <div class="podcast-grid">
         <div id="grid-header">        
             <h2>Podcasts</h2>
             <h4>
-                Ik post elke kwartaal een Engelstalige podcast op Spotify.
+                Ik post op mijn kanaal op Spotify ("Ronnie Talks Higher Ground") elk kwartaal een Engelstalige podcast.
             </h4>
             <div class="podcast-icon">
                 <img src="images/PodcastMicroIcon.png">
@@ -245,8 +223,46 @@
                     allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
             </iframe>
         </div>
+
+        <div class="podcast-card">
+            <h3>Podcast 1.6 Mentoring</h3>
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/episode/1WFFfbzMfz44wF8iSClDBr" 
+                    width="100%" height="152" frameborder="0" 
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+        
     </div>
+    
     <div>
+        <p>
+            Een fijn project was het maken van een videoclip. Zowel het liedje als de (video)beelden zijn met behulp van AI gemaakt en afgewerkt met videosoftware en grafische software. Enjoy!
+        </p>
+    </div>
+
+    <div class="podcast-grid">
+        <div id="grid-header">        
+            <h2>Video</h2>
+            <h4>
+                Mijn AI-videoclip.
+            </h4>
+            <div class="video-icon">
+                <img src="images/FilmIcon.png">
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe width="100%" height="360" 
+                    src="https://www.youtube-nocookie.com/embed/92_ReDblgS0" 
+                    title="YouTube video" 
+                    frameborder="0" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    
+    </div>
+    <div class="social-icon">
         <a href="https://www.linkedin.com/in/jeroenluyten/"
             target="_blank"
             rel="noopener noreferrer">
