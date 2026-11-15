@@ -54,21 +54,12 @@
         
         .video-container {
             text-align: center;
-            width: 600px;           /* Pas deze waarde aan voor de gewenste grootte van je video */
-            max-width: 100%;        /* Zorgt ervoor dat hij op mobiel niet van het scherm af loopt */
+            width: 100%;
+            max-width: 600px;      /* Pas deze waarde aan voor de gewenste grootte van je video */
             margin-inline: auto;    /* Centreert de container automatisch perfect op de pagina */
             margin-bottom: 50px;
         }
         
-        p {
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            margin: 20px 100px;
-            font-size: 18px;
-            max-width: 900px; 
-        }
-
         .video-icon {
             position: absolute;
             top: 15px;
@@ -120,7 +111,7 @@
             margin-left: 30px;
         }
 
-        .podcast-grid h4 {
+        .podcast-grid p {
             width: auto;
             margin-left: 50px;
         }
@@ -150,9 +141,38 @@
             margin-left: 30px;
         }
 
-        .music-grid h4 {
+        .music-grid p {
             width: auto;
             margin-left: 50px;
+        }
+
+        .music-card {
+            width: 100%;
+            background-color: #eeebde;/* Licht-geel-grijze tint */
+            padding: 30px;              /* Binnenruimte zodat de spelers los van de rand komen */
+            border: 2px solid #888888;/* Donkerder grijze rand (maak het getal hoger of lager om dikker/dunner te maken) */
+        }
+
+        .music-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .music-content {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .music-content iframe {
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        .music-content p {
+            flex: 1;
+            margin: 0;
+            text-align: left;
+            display: block;
         }
 
         .music-icon {
@@ -197,7 +217,7 @@
     <div class="podcast-grid">
         <div id="grid-header">        
             <h2>Podcasts</h2>
-            <h4>
+            <p>
                 Ik post op mijn kanaal op Spotify for Creators
                 (<a href="https://open.spotify.com/show/1PMFoMRnoJcxgRlYJwQB7A?si=O9GDf7_OSkmLrAszWpN_eA"
                     target="_blank"
@@ -205,7 +225,7 @@
                     Ronnie Talks Higher Ground
                 </a>)
                 elk kwartaal een Engelstalige podcast.
-            </h4>
+            </p>
             <!--https://open.spotify.com/show/1PMFoMRnoJcxgRlYJwQB7A?si=O9GDf7_OSkmLrAszWpN_eA-->
             <div class="podcast-icon">
                 <img src="images/PodcastMicroIcon.png">
@@ -271,7 +291,7 @@
 <div class="music-grid">
         <div id="grid-header">        
             <h2>Muziek</h2>
-            <h4>
+            <p>
                 Ik heb op mijn kanaal op Spotify for Artists een Extended Play (EP)
                 "<a href="https://open.spotify.com/album/7wkVCYkBMr1C9XdWYpHrDo"
                     target="_blank"
@@ -280,45 +300,70 @@
                 </a>"
                 gereleased.
                 <br>Deze liedjes werden rond het jaar 2005-2006 gemaakt en zijn uiteindelijk in november 2026 uitgebracht.
-            </h4>
+                <br>De software voor de muziekproductie heette toen "Propellerhead Reason", wat nu "Reason Studios" geworden is.
+            </p>
             <div class="music-icon">
                 <img src="images/Muzieknoten.png">
             </div>
         </div>
-        <div class="podcast-card">
-            <h3>Phase 90</h3>
-            <iframe style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/3ZgIUCq1kNDIYQEAOxfECa?si=221bafed91954598" 
-                    width="100%" height="152" frameborder="0" 
-                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
+        <div class="music-card">
+            <h3>1. Phase 90</h3>
+            <div  class="music-content">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/3ZgIUCq1kNDIYQEAOxfECa?si=221bafed91954598" 
+                        width="100%" height="152" frameborder="0" 
+                        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+                <p>
+                    <strong>House (Classic House)</strong>
+                    <br>Lichte, neutrale 90s house/dance opener met iconische effecten. De toegankelijke 'Crowd Pleaser'.
+                </p>
+            </div>
         </div>
 
-        <div class="podcast-card">
-            <h3>Obsession</h3>
-            <iframe style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/29A6SOnO44MKabXKI5twgA?si=0bca28189f4b4892" 
-                    width="100%" height="152" frameborder="0" 
-                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
+        <div class="music-card">
+            <h3>2. Obsession</h3>
+            <div  class="music-content">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/29A6SOnO44MKabXKI5twgA?si=0bca28189f4b4892" 
+                        width="100%" height="152" frameborder="0" 
+                        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+                <p>
+                    <strong>Organic House (Melodic House, Cinematic Electronic)</strong>
+                    <br>Het emotionele drama: diepe, psychedelische synths en een meeslepende opbouw van melancholie naar euforie.
+                </p>
+            </div>
         </div>
 
-        <div class="podcast-card">
-            <h3>Verzonken</h3>
-            <iframe style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/3yneKWwCFKZwwxRr6gMKBO?si=55ef70c08e5a4985" 
-                    width="100%" height="152" frameborder="0" 
-                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
+        <div class="music-card">
+            <h3>3. Verzonken</h3>
+            <div  class="music-content">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/3yneKWwCFKZwwxRr6gMKBO?si=55ef70c08e5a4985" 
+                        width="100%" height="152" frameborder="0" 
+                        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+                <p>
+                    <strong>Deep House</strong>
+                    <br>Het artisanale meesterwerk en de titeltrack van de EP. Unieke zelfgebouwde Reason-patches en diepgang.
+                </p>
+            </div>
         </div>
 
-        <div class="podcast-card">
-            <h3>Hakkeu</h3>
-            <iframe style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/6LbvBTvYIL0L2Dm7YPQAsI?si=8df06c152c254ab5" 
-                    width="100%" height="152" frameborder="0" 
-                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
+        <div class="music-card">
+            <h3>4. Hakkeu</h3>
+            <div  class="music-content">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/6LbvBTvYIL0L2Dm7YPQAsI?si=8df06c152c254ab5" 
+                        width="100%" height="152" frameborder="0" 
+                        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+                <p>
+                    <strong>Hardcore (Hard Dance)</strong>
+                    <br>De bevrijdende afsluiter met de knipoog naar de gabber/dance-cultuur en de verrassende vrolijke plottwist.
+                </p>
+            </div>
         </div>
         
     </div>
@@ -326,12 +371,12 @@
     <div class="podcast-grid">
         <div id="grid-header">        
             <h2>Video</h2>
-            <h4>
+            <p>
                 Een fijn project was het maken van een videoclip. Zowel het liedje als de (video)beelden zijn met behulp van AI gemaakt.
                 <br>Het geheel werd afgewerkt met videosoftware en grafische software (meer details in de eindaftiteling van de video).
                 <br>
                 <br>Enjoy!
-            </h4>
+            </p>
             <div class="video-icon">
                 <img src="images/FilmIcon.png">
             </div>
